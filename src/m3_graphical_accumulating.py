@@ -116,7 +116,7 @@ def draw_parallel_lines(n, point, length, window):
     for _ in range(n):
         point1 = rg.Point(x,y)
         point2 = rg.Point(x+length,y)
-        
+
 
 def run_test_draw_lines():
     """ Tests the   draw_lines  function. """
