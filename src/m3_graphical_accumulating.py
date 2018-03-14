@@ -191,19 +191,11 @@ def draw_lines(n, point, window):
     ####################################################################
     # ------------------------------------------------------------------
 
-    x = point.x
-    y = point.y
-
-    pt1 = rg.Point(x,y)
-    pt2 = rg.Point(x+100,y)
-
     for k in range(n):
-
-        line = rg.Line(pt1,pt2)
-
-        pt2.move_to(pt2.x, point.y -100 + (k*(200/n-1)))
-
-        line.attach_to(window)
+        a = 200/(n-1)
+        ed = rg.Point(point.x + 100, point.y - 100 + (a*k))
+        lin = rg.Line(point,ed)
+        lin.attach_to(window)
         window.render()
 
 # ----------------------------------------------------------------------
